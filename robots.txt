@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://restaurantetocadocoelhosg-web.github.io/toca-do-coelho/sitemap.xml
