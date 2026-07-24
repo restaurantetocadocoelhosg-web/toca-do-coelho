@@ -24,7 +24,7 @@ Nenhum problema **crítico** foi encontrado hoje (o que teria sido crítico — 
 
 | # | Problema | Local | Impacto | Correção | Corrigível no código? | Status |
 |---|---|---|---|---|---|---|
-| M1 | Google Analytics 4 não está instalado | index.html | Sem GA4 não dá pra medir comportamento no site (cliques em botões, tempo na página) — só dá pra usar dados do Search Console (impressões/cliques de busca) | Criar propriedade GA4 no Google Analytics e inserir o Measurement ID real | Sim, mas **não posso inventar um ID** — precisa que o dono crie a propriedade e me passe o ID | **Pendente — aguardando ID real** |
+| ~~M1~~ | ~~Google Analytics 4 não estava instalado~~ | index.html, cardapio/index.html | — | Propriedade GA4 criada pelo Rubens (Measurement ID G-9NX64E3BNV), gtag.js instalado nas 2 páginas publicadas | Sim | ✅ **Corrigido em 24/07/2026** |
 | M2 | Imagens em JPEG, não WebP/AVIF | `img/*.jpg` (9 arquivos, ~1,95MB no total) | Formatos modernos cortariam ~30-50% do peso, melhorando LCP no celular | Converter pra WebP com fallback `<picture>` | Sim | Não feito nesta rodada — recomendado como próximo passo (ver Plano 30/60/90) |
 | M3 | Site é uma única página (sitemap.xml só tem 1 URL) | Arquitetura geral | Menos superfície pra aparecer em buscas de cauda longa (ex. "cardápio Toca do Coelho", "marmitas fit São Gonçalo") | Avaliar criar página `/cardapio/` com conteúdo genuíno (o prompt original sugeria várias páginas — ver seção "Não feito de propósito" abaixo) | Sim, mas requer decisão de conteúdo | Recomendado, não feito (evitar página vazia/duplicada) |
 | M4 | Sem cabeçalho HSTS explícito | Resposta HTTP do domínio | Pequena lacuna de segurança de transporte (HTTPS já é forçado, isso é só o header adicional) | GitHub Pages custom domain não permite headers customizados — limitação da hospedagem, não do código | Não — limitação da plataforma | Não corrigível sem trocar de hospedagem |
@@ -65,7 +65,7 @@ O prompt original foi escrito pra um projeto com framework/build system (`src/da
 - **Não rodei Lighthouse/CI** porque não existe pipeline configurado. Fiz uma auditoria manual equivalente (curl pra redirects/headers, Python/Pillow pra dimensões de imagem, teste de links).
 - **Não criei testes automatizados em CI** (não há test runner). Criei `scripts/check-consistency.js`, um script Node simples (zero dependências) que roda manualmente e falha com código de saída 1 se achar divergência — testei rodando contra o site ao vivo agora, passou.
 - **Não instalei IndexNow** — exigiria gerar uma chave e publicá-la (arquivo público `{chave}.txt` na raiz) e depois integrar o envio a cada mudança. Como não há processo de build/deploy automatizado que dispare isso, ficaria como uma chamada manual — documentado como próximo passo, não implementado às cegas.
-- **Não instalei GA4** — exigiria um Measurement ID real que só o dono pode gerar (não vou inventar/colocar placeholder ativo).
+- ~~Não instalei GA4~~ — **feito**: Rubens criou a propriedade (Measurement ID G-9NX64E3BNV) e eu instalei o gtag.js nas duas páginas.
 
 ---
 
