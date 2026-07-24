@@ -91,6 +91,10 @@ section { padding-block: var(--space-section); }
 .hero-bg {
   position: absolute; inset: 0; z-index: -2;
   background: url("img/hero-bacalhau.jpg") center 38% / cover no-repeat;
+  background-image: image-set(url("img/hero-bacalhau.webp") type("image/webp"), url("img/hero-bacalhau.jpg") type("image/jpeg"));
+  background-position: center 38%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .hero::after {
   content: ""; position: absolute; inset: 0; z-index: -1;
