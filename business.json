@@ -1,0 +1,76 @@
+{
+  "_readme": "Fonte única de dados comerciais do Restaurante Toca do Coelho. Este site é HTML estático (sem build/framework), então este arquivo NÃO é consumido automaticamente pelo index.html — é a referência canônica pra checar divergências manualmente (ou via scripts/check-consistency.js). Ao mudar preço/horário/telefone, atualize AQUI primeiro e depois replique em: index.html (visível + JSON-LD), Google Business Profile, Instagram, iFood, 99Food.",
+  "lastUpdated": "2026-07-24",
+  "name": "Restaurante Toca do Coelho",
+  "alternateName": "Toca do Coelho",
+  "shortDescription": "Restaurante self-service a quilo em São Gonçalo (RJ), comida caseira todos os dias.",
+  "longDescription": "Restaurante self-service a quilo em São Gonçalo (RJ). Comida caseira com cardápio variado todos os dias: grelhados, assados, tortas quentes, massas e saladas. Feijoada às sextas e frutos do mar aos domingos. Também oferece marmitas fit congeladas, delivery via iFood e 99Food e espaço para eventos.",
+  "address": {
+    "streetAddress": "Rua Capitão Juvenal Figueiredo, 71",
+    "neighborhood": "Coelho",
+    "city": "São Gonçalo",
+    "state": "RJ",
+    "country": "BR",
+    "postalCode": null,
+    "_pendingConfirmation": "DIVERGÊNCIA CONHECIDA (não resolvida, não escolher sozinho): o registro do CNPJ (48.872.365/0001-32, fonte Econodata/cnpj.biz) diz bairro 'Colubande', CEP 24.744-560. O Google Business Profile (verificado pelo dono, checado ao vivo em 24/07/2026) e o Plus Code dizem bairro 'Coelho', CEP 24750-575. Este arquivo usa 'Coelho' por ser o que já está em 100% dos canais públicos (site, GBP, marca, Instagram) e o mais recente/gerenciado ativamente. Rubens precisa confirmar se quer reconciliar o cadastro do CNPJ ou se é uma divisão de bairro contestada/de fronteira (comum em SG)."
+  },
+  "geo": {
+    "latitude": -22.8306368,
+    "longitude": -43.0026438,
+    "source": "Extraído do Place ID oficial ChIJy973t4uRmQARQXr3mZFOpjg já usado no schema (Google Maps), em 24/07/2026."
+  },
+  "phone": "+55 21 99791-2517",
+  "whatsapp": "https://wa.me/5521997912517",
+  "hours": {
+    "regular": [
+      { "days": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "11:00", "closes": "15:30" },
+      { "days": ["Friday","Saturday","Sunday"], "opens": "11:00", "closes": "16:00" }
+    ],
+    "holidays": "Funcionamento normal (segue o padrão de sábado/domingo: 11h-16h), EXCETO Natal (25/12) e Ano Novo (01/01) que ficam FECHADOS — confirmado pelo dono em 24/07/2026. Já cadastrado no Google Business Profile."
+  },
+  "prices": {
+    "weekdayMonToFri": "R$ 64,99/kg",
+    "weekendAndHolidays": "R$ 89,99/kg",
+    "lastConfirmed": "2026-07-22",
+    "note": "Preço corrigido no bot do WhatsApp em 22/07/2026 e replicado no site em 24/07/2026. ANTES disso o site tinha uma estrutura de 3 faixas desatualizada (59,99 / 74,99 / 89,99) — não usar esses valores antigos em nenhum lugar."
+  },
+  "paymentMethods": ["Dinheiro", "Cartão de crédito", "Cartão de débito", "Pix", "Vale-refeição (Alelo, Ticket, VR, Pluxee)"],
+  "cuisineTypes": ["Brasileira", "Comida caseira", "Self-service a quilo"],
+  "services": [
+    "Restaurante self-service a quilo",
+    "Buffet de almoço",
+    "Comida caseira",
+    "Churrasco",
+    "Feijoada às sextas",
+    "Frutos do mar aos domingos",
+    "Marmitas fit congeladas",
+    "Delivery pelo iFood e 99Food",
+    "Espaço para eventos e confraternizações"
+  ],
+  "acceptsReservations": false,
+  "parking": "Sem estacionamento próprio; há espaço em frente ao restaurante, junto à RJ-104.",
+  "links": {
+    "website": "https://www.restaurantetocadocoelhosg.com.br/",
+    "googleMapsPlaceId": "ChIJy973t4uRmQARQXr3mZFOpjg",
+    "googleMaps": "https://www.google.com/maps/search/?api=1&query=Restaurante%20Toca%20do%20Coelho&query_place_id=ChIJy973t4uRmQARQXr3mZFOpjg",
+    "googleReviewLink": "https://search.google.com/local/writereview?placeid=ChIJy973t4uRmQARQXr3mZFOpjg",
+    "instagram": "https://www.instagram.com/restaurante.tocadocoelho",
+    "ifood": "https://www.ifood.com.br/delivery/sao-goncalo-rj/restaurante-toca-do-coelho-coelho/7eb56d39-81ed-4cf2-a819-f783c159f23a",
+    "99food": "https://oia.99app.com/dlp9/wkAlEX",
+    "marmitasPortfolio": "https://restaurantetocadocoelhosg-web.github.io/marmitas/",
+    "tripadvisor": null,
+    "googleBusinessProfile": "https://g.page/r/CUF695mRTqY4EBM/review"
+  },
+  "logo": null,
+  "mainImages": [
+    "https://www.restaurantetocadocoelhosg.com.br/img/hero-bacalhau.jpg",
+    "https://www.restaurantetocadocoelhosg.com.br/img/prato-feijoada.jpg",
+    "https://www.restaurantetocadocoelhosg.com.br/img/salao-eventos.jpg"
+  ],
+  "googleReviews": {
+    "rating": 4.8,
+    "count": 396,
+    "checkedAt": "2026-07-24",
+    "note": "Vindo do próprio Google Maps (dado real, verificado ao vivo). NÃO publicar como AggregateRating no JSON-LD do site — as avaliações não estão hospedadas/visitáveis no nosso domínio, então marcar isso no schema seria contra as diretrizes do próprio Google de dados estruturados. Manter aqui só como referência interna."
+  }
+}
