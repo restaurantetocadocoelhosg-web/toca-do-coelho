@@ -1,4 +1,34 @@
+# Regra geral: libera tudo (mantém indexação simples)
 User-agent: *
 Allow: /
+
+# --- Bots de busca/descoberta (mesma liberação acima, explicitada) ---
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Bots ligados a TREINAMENTO de modelos (GPTBot, ClaudeBot, Google-Extended,
+# Applebot-Extended) nao tem regra especifica aqui -- decisao pendente do
+# dono do site. Ver AI_CRAWLER_POLICY.md.
 
 Sitemap: https://www.restaurantetocadocoelhosg.com.br/sitemap.xml
