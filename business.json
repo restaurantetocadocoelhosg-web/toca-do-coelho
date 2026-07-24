@@ -23,8 +23,25 @@
   "whatsapp": "https://wa.me/5521997912517",
   "hours": {
     "regular": [
-      { "days": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "11:00", "closes": "15:30" },
-      { "days": ["Friday","Saturday","Sunday"], "opens": "11:00", "closes": "16:00" }
+      {
+        "days": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday"
+        ],
+        "opens": "11:00",
+        "closes": "15:30"
+      },
+      {
+        "days": [
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "11:00",
+        "closes": "16:00"
+      }
     ],
     "holidays": "Funcionamento normal (segue o padrão de sábado/domingo: 11h-16h), EXCETO Natal (25/12) e Ano Novo (01/01) que ficam FECHADOS — confirmado pelo dono em 24/07/2026. Já cadastrado no Google Business Profile."
   },
@@ -34,8 +51,18 @@
     "lastConfirmed": "2026-07-22",
     "note": "Preço corrigido no bot do WhatsApp em 22/07/2026 e replicado no site em 24/07/2026. ANTES disso o site tinha uma estrutura de 3 faixas desatualizada (59,99 / 74,99 / 89,99) — não usar esses valores antigos em nenhum lugar."
   },
-  "paymentMethods": ["Dinheiro", "Cartão de crédito", "Cartão de débito", "Pix", "Vale-refeição (Alelo, Ticket, VR, Pluxee)"],
-  "cuisineTypes": ["Brasileira", "Comida caseira", "Self-service a quilo"],
+  "paymentMethods": [
+    "Dinheiro",
+    "Cartão de crédito",
+    "Cartão de débito",
+    "Pix",
+    "Vale-refeição (Alelo, Ticket, VR, Pluxee)"
+  ],
+  "cuisineTypes": [
+    "Brasileira",
+    "Comida caseira",
+    "Self-service a quilo"
+  ],
   "services": [
     "Restaurante self-service a quilo",
     "Buffet de almoço",
@@ -59,7 +86,8 @@
     "99food": "https://oia.99app.com/dlp9/wkAlEX",
     "marmitasPortfolio": "https://restaurantetocadocoelhosg-web.github.io/marmitas/",
     "tripadvisor": null,
-    "googleBusinessProfile": "https://g.page/r/CUF695mRTqY4EBM/review"
+    "googleBusinessProfile": "https://g.page/r/CUF695mRTqY4EBM/review",
+    "cardapioPage": "https://www.restaurantetocadocoelhosg.com.br/cardapio/"
   },
   "logo": null,
   "mainImages": [
