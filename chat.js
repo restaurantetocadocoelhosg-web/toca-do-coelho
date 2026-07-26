@@ -15,7 +15,7 @@
       { k: ['horario', 'hora', 'abre', 'fecha', 'funciona', 'aberto', 'feriado', 'domingo', 'segunda'],
         r: 'Funcionamos TODOS os dias no almoço:\n• Seg a qui: 11h às 15h30\n• Sex a dom: 11h às 16h\n• Feriados: normal 🎉' },
       { k: ['preco', 'quilo', 'kg', 'valor', 'custa', 'quanto'],
-        r: 'Preço do quilo:\n• Seg a qui: R$ 59,99/kg\n• Sex e sáb: R$ 74,99/kg\n• Dom e feriados: R$ 89,99/kg\nSelf-service à vontade, você paga pelo peso! 🍽️' },
+        r: 'Preço do quilo:\n• Segunda a sexta: R$ 64,99/kg\n• Sábados, domingos e feriados: R$ 89,99/kg\nSelf-service à vontade, você paga pelo peso! 🍽️' },
       { k: ['endereco', 'onde', 'fica', 'local', 'chegar', 'rua', 'mapa'],
         r: 'Estamos na Rua Capitão Juvenal Figueiredo, 71 — bairro Coelho, São Gonçalo/RJ (junto à RJ-104). Tem espaço pra estacionar em frente! 📍',
         link: ['Abrir no Google Maps', 'https://www.google.com/maps/search/?api=1&query=Restaurante%20Toca%20do%20Coelho&query_place_id=ChIJy973t4uRmQARQXr3mZFOpjg'] },

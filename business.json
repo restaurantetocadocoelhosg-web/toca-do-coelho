@@ -11,8 +11,8 @@
     "city": "São Gonçalo",
     "state": "RJ",
     "country": "BR",
-    "postalCode": null,
-    "_pendingConfirmation": "DIVERGÊNCIA CONHECIDA (não resolvida, não escolher sozinho): o registro do CNPJ (48.872.365/0001-32, fonte Econodata/cnpj.biz) diz bairro 'Colubande', CEP 24.744-560. O Google Business Profile (verificado pelo dono, checado ao vivo em 24/07/2026) e o Plus Code dizem bairro 'Coelho', CEP 24750-575. Este arquivo usa 'Coelho' por ser o que já está em 100% dos canais públicos (site, GBP, marca, Instagram) e o mais recente/gerenciado ativamente. Rubens precisa confirmar se quer reconciliar o cadastro do CNPJ ou se é uma divisão de bairro contestada/de fronteira (comum em SG)."
+    "postalCode": "24750-575",
+    "_pendingConfirmation": "DIVERGÊNCIA LEGAL CONHECIDA: a localização pública e operacional confirmada no Google Business Profile usa Coelho, CEP 24750-575. O registro do CNPJ (48.872.365/0001-32, fonte Econodata/cnpj.biz) mostra Colubande, CEP 24.744-560. Para SEO local e atendimento ao público, usar Coelho/24750-575; a eventual retificação cadastral do CNPJ é uma ação administrativa separada."
   },
   "geo": {
     "latitude": -22.8306368,
