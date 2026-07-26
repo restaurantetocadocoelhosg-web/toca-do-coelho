@@ -25,8 +25,8 @@ Nenhum problema **crítico** foi encontrado hoje (o que teria sido crítico — 
 | # | Problema | Local | Impacto | Correção | Corrigível no código? | Status |
 |---|---|---|---|---|---|---|
 | ~~M1~~ | ~~Google Analytics 4 não estava instalado~~ | index.html, cardapio/index.html | — | Propriedade GA4 criada pelo Rubens (Measurement ID G-9NX64E3BNV), gtag.js instalado nas 2 páginas publicadas | Sim | ✅ **Corrigido em 24/07/2026** |
-| M2 | Imagens em JPEG, não WebP/AVIF | `img/*.jpg` (9 arquivos, ~1,95MB no total) | Formatos modernos cortariam ~30-50% do peso, melhorando LCP no celular | Converter pra WebP com fallback `<picture>` | Sim | Não feito nesta rodada — recomendado como próximo passo (ver Plano 30/60/90) |
-| M3 | Site é uma única página (sitemap.xml só tem 1 URL) | Arquitetura geral | Menos superfície pra aparecer em buscas de cauda longa (ex. "cardápio Toca do Coelho", "marmitas fit São Gonçalo") | Avaliar criar página `/cardapio/` com conteúdo genuíno (o prompt original sugeria várias páginas — ver seção "Não feito de propósito" abaixo) | Sim, mas requer decisão de conteúdo | Recomendado, não feito (evitar página vazia/duplicada) |
+| ~~M2~~ | ~~Imagens em JPEG, não WebP/AVIF~~ | `img/*` | — | As 9 imagens foram convertidas para WebP com fallback JPEG | Sim | ✅ **Corrigido em 24/07/2026** |
+| ~~M3~~ | ~~Site era uma única página~~ | Arquitetura geral | — | Criada página `/cardapio/` com conteúdo real e incluída no sitemap | Sim | ✅ **Corrigido em 24/07/2026** |
 | M4 | Sem cabeçalho HSTS explícito | Resposta HTTP do domínio | Pequena lacuna de segurança de transporte (HTTPS já é forçado, isso é só o header adicional) | GitHub Pages custom domain não permite headers customizados — limitação da hospedagem, não do código | Não — limitação da plataforma | Não corrigível sem trocar de hospedagem |
 
 ### Baixo (já corrigidos nesta rodada)
@@ -61,7 +61,7 @@ Nenhum problema **crítico** foi encontrado hoje (o que teria sido crítico — 
 
 O prompt original foi escrito pra um projeto com framework/build system (`src/data/business.ts`, testes automatizados, Lighthouse CI, múltiplas páginas de rota). Adaptações conscientes:
 
-- **Não criei `/restaurante-em-sao-goncalo/`, `/buffet-a-quilo/`, `/delivery/`, `/contato/` etc.** O prompt avisa explicitamente para não criar "páginas vazias ou quase duplicadas" — como o conteúdo de cada uma dessas seções já vive bem na página única (com âncoras `#buffet`, `#delivery` etc.), criar páginas separadas agora seria conteúdo fino/duplicado. **Exceção que recomendo**: uma página `/cardapio/` dedicada tem conteúdo genuíno o suficiente (o buffet muda diariamente, tem destaques semanais) — deixo como recomendação pro plano de 30 dias, não fiz sem validar convosco.
+- **Não criei `/restaurante-em-sao-goncalo/`, `/buffet-a-quilo/`, `/delivery/`, `/contato/` etc.** Essas seções já vivem bem na página principal; páginas separadas seriam conteúdo fino ou duplicado. A exceção `/cardapio/` foi criada posteriormente com conteúdo real.
 - **Não rodei Lighthouse/CI** porque não existe pipeline configurado. Fiz uma auditoria manual equivalente (curl pra redirects/headers, Python/Pillow pra dimensões de imagem, teste de links).
 - **Não criei testes automatizados em CI** (não há test runner). Criei `scripts/check-consistency.js`, um script Node simples (zero dependências) que roda manualmente e falha com código de saída 1 se achar divergência — testei rodando contra o site ao vivo agora, passou.
 - **Não instalei IndexNow** — exigiria gerar uma chave e publicá-la (arquivo público `{chave}.txt` na raiz) e depois integrar o envio a cada mudança. Como não há processo de build/deploy automatizado que dispare isso, ficaria como uma chamada manual — documentado como próximo passo, não implementado às cegas.
@@ -101,8 +101,8 @@ Ver `EXTERNAL_LISTINGS_CHECKLIST.md` para o que precisa de ação humana fora do
 - Submeter o site no Bing Webmaster Tools (ver `EXTERNAL_LISTINGS_CHECKLIST.md`).
 
 **60 dias:**
-- Avaliar criação da página `/cardapio/` com conteúdo real (destaques semanais, atualização visível).
-- Converter as 9 imagens pra WebP com fallback.
+- Atualizar os destaques da página `/cardapio/` quando o cardápio recorrente mudar.
+- Revisar o peso e a qualidade das imagens WebP conforme novas fotos forem publicadas.
 - Revisar se `business.json` precisa de campos novos conforme o site cresce.
 
 **90 dias:**
