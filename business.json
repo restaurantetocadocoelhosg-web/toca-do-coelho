@@ -4,7 +4,7 @@
   "name": "Restaurante Toca do Coelho",
   "alternateName": "Toca do Coelho",
   "shortDescription": "Restaurante self-service a quilo em São Gonçalo (RJ), comida caseira todos os dias.",
-  "longDescription": "Restaurante self-service a quilo em São Gonçalo (RJ). Comida caseira com cardápio variado todos os dias: grelhados, assados, tortas quentes, massas e saladas. Feijoada às sextas e frutos do mar aos domingos. Também oferece marmitas fit congeladas, delivery via iFood e 99Food e espaço para eventos.",
+  "longDescription": "Restaurante self-service a quilo em São Gonçalo (RJ). Comida caseira com cardápio variado todos os dias: grelhados, assados, tortas quentes, massas e saladas. Feijoada às sextas e frutos do mar aos domingos. Também oferece delivery via iFood e 99Food e espaço para eventos.",
   "address": {
     "streetAddress": "Rua Capitão Juvenal Figueiredo, 71",
     "neighborhood": "Coelho",
@@ -70,7 +70,7 @@
     "Churrasco",
     "Feijoada às sextas",
     "Frutos do mar aos domingos",
-    "Marmitas fit congeladas",
+    "Ceia de Natal por encomenda",
     "Delivery pelo iFood e 99Food",
     "Espaço para eventos e confraternizações"
   ],
@@ -84,7 +84,7 @@
     "instagram": "https://www.instagram.com/restaurante.tocadocoelho",
     "ifood": "https://www.ifood.com.br/delivery/sao-goncalo-rj/restaurante-toca-do-coelho-coelho/7eb56d39-81ed-4cf2-a819-f783c159f23a",
     "99food": "https://oia.99app.com/dlp9/wkAlEX",
-    "marmitasPortfolio": "https://restaurantetocadocoelhosg-web.github.io/marmitas/",
+    "ceiaNatal": "https://restaurantetocadocoelhosg-web.github.io/ceia-natal/",
     "tripadvisor": null,
     "googleBusinessProfile": "https://g.page/r/CUF695mRTqY4EBM/review",
     "cardapioPage": "https://www.restaurantetocadocoelhosg.com.br/cardapio/"

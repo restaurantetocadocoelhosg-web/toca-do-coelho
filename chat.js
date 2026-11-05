@@ -9,7 +9,7 @@
     corTopo: 'linear-gradient(135deg,#5b1619,#2d0b0d)',
     corAcento: '#c9982f',
     whatsapp: '5521997912517',
-    chips: ['Horários', 'Preço do quilo', 'Endereço', 'Delivery', 'Marmitas fit', 'Reservas'],
+    chips: ['Horários', 'Preço do quilo', 'Endereço', 'Delivery', 'Ceia de Natal', 'Reservas'],
     semResposta: 'Boa pergunta! Essa eu deixo com a equipe — clica abaixo que o nosso atendimento no WhatsApp responde rapidinho. 👇',
     base: [
       { k: ['horario', 'hora', 'abre', 'fecha', 'funciona', 'aberto', 'feriado', 'domingo', 'segunda'],
@@ -22,9 +22,12 @@
       { k: ['delivery', 'entrega', 'ifood', '99', 'pedir em casa', 'entregam'],
         r: 'Nosso delivery é pelo iFood e 99Food! 🛵',
         link: ['Pedir no iFood', 'https://www.ifood.com.br/delivery/sao-goncalo-rj/restaurante-toca-do-coelho-coelho/7eb56d39-81ed-4cf2-a819-f783c159f23a'] },
-      { k: ['marmita', 'fit', 'congelada', 'semana'],
-        r: 'Temos marmitas fit congeladas de 350g pra organizar sua semana! É só aquecer. Pedidos pelo WhatsApp. 🥗',
-        link: ['Ver portfólio de marmitas', 'https://restaurantetocadocoelhosg-web.github.io/marmitas/'] },
+      { prioridade: true, k: ['ceia', 'natal', 'kit'],
+        r: 'Nossa Ceia de Natal tem Kit Ceia para até 4 pessoas (R$ 120,00 por pessoa, total de R$ 480,00) e pratos avulsos. Encomendas até 22/12 e retirada em 24/12, até 17h. 🎄',
+        link: ['Montar minha ceia', 'https://restaurantetocadocoelhosg-web.github.io/ceia-natal/'] },
+      { prioridade: true, k: ['marmita', 'congelada'],
+        r: 'Não vendemos mais marmitas congeladas. Para receber em casa, nosso delivery é pelo iFood e 99Food! 🛵',
+        link: ['Pedir no iFood', 'https://www.ifood.com.br/delivery/sao-goncalo-rj/restaurante-toca-do-coelho-coelho/7eb56d39-81ed-4cf2-a819-f783c159f23a'] },
       { k: ['reserva', 'reservar', 'mesa', 'aniversario', 'evento', 'festa'],
         r: 'No dia a dia atendemos por ordem de chegada, sem reserva. Para EVENTOS e datas especiais, fala com a gente no WhatsApp que organizamos tudo! 🎈' },
       { k: ['pagamento', 'cartao', 'pix', 'vale', 'voucher', 'alelo', 'ticket', 'vr', 'pluxee', 'aceita'],
@@ -48,6 +51,8 @@
     let melhor = null, pts = 0;
     for (const item of CFG.base) {
       const hits = item.k.filter(k => t.includes(norm(k))).length;
+      // "Quanto custa a ceia?" fala da ceia, nao do preco do quilo, mesmo com mais palavras em comum.
+      if (item.prioridade && hits > 0) return item;
       if (hits > pts) { pts = hits; melhor = item; }
     }
     return melhor;
